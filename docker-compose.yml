@@ -1,0 +1,14 @@
+version: "3.6"
+services:
+  ocsen-nodejs:
+    image: ocsen-nodejs:latest
+    container_name: ocsen-nodejs
+    volumes: 
+        - ".:/usr/src/app"
+    ports:
+      - "8080:8080"
+    networks:
+      - ocsen-nodejs-network
+networks:
+  ocsen-nodejs-network:
+    driver: bridge
